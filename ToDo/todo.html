@@ -1,7 +1,9 @@
-<input type="text" id="myFilter" onkeyup="filterFunction()" placeholder="Filter your to-dos"/>
+<input type="text" id="myFilter" placeholder="Filter your to-dos" ng-model="$ctrl.filter"/>
 
-<input type="text" id="myAdd" placeholder="Add your to do" ng-model= "$ctrl.toDos"/>
+<input type="text" id="myAdd" placeholder="Add your to do" ng-model= "$ctrl.toDo"/>
 
 <button ng-click="$ctrl.add()">ADD</button>
 
-<button class="close" ng-click="$ctrl.remove("
+<li ng-repeat="list in $ctrl.list">{{list}}<button ng-click="$ctrl.remove($index)">x</button></li>
+
+</ol>

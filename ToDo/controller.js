@@ -2,18 +2,22 @@
 
 {
     angular.module('app')
-        .controller("TodoController", function(){
+        .controller("ToDoController", function(){
             const $ctrl = this;
             
             $ctrl.list=[];
             $ctrl.add = function() {
-                console.log($ctrl.toDos)
-                $ctrl.list.push($ctrl.toDos)
+                console.log($ctrl.toDo)
+                $ctrl.list.push($ctrl.toDo)
+              
 
             };
             
             $ctrl.remove = function(index) {
                 $ctrl.list.splice(index,1);
             };
+            $ctrl.list = ['Buy Groceries', 'Laundry', 'Pay Bills'];     
         });
+
+       
 }

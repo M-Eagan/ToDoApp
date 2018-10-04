@@ -3,8 +3,9 @@
 {
     angular.module('app')
         .component('todo', {
-            controller: 'TodoController',
+            controller: 'ToDoController',
             templateUrl: 'ToDo/todo.html'
         })
+
 }
 
