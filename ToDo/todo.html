@@ -1,9 +1,7 @@
 <input type="text" id="myFilter" placeholder="Filter your to-dos" ng-model="$ctrl.filter"/>
-
-<input type="text" id="myAdd" placeholder="Add your to do" ng-model= "$ctrl.toDo"/>
-
-<button ng-click="$ctrl.add()">ADD</button>
-
-<li ng-repeat="list in $ctrl.list">{{list}}<button ng-click="$ctrl.remove($index)">x</button></li>
-
+<ol>
+<li ng-repeat="list in $ctrl.list"><button class="completeButton">Complete</button>{{list}}<button class="xButton" ng-click="$ctrl.remove($index)">x</button></li>
 </ol>
+<input type="text" id="myAdd" placeholder="Add your to do" ng-model= "$ctrl.toDo"/>
+<button class="addButton" ng-click="$ctrl.add()">ADD</button>
+
