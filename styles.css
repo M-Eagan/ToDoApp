@@ -58,16 +58,32 @@ h2 {
 
  .xButton {
     border: none;
-    padding-left: 100px;
+    justify-content: left;
     font-size: 15px;
  }
 
  .completeButton {
     border: solid 1px rgba(255, 0, 200, 0.801);
     color: rgba(255, 0, 200, 0.801);
- }
+ } 
 
 
  li {
      font-size: 15px;
+     width: 450px;
+     margin: 0;
+     padding: 0;
  }
+
+ li.disabled {
+     text-decoration: line-through;
+ }
+
+ .active {
+    border: solid 1px rgba(255, 0, 200, 0.801);
+    color: rgba(255, 0, 200, 0.801);
+  }
+
+  .disabled {
+    display: hide;
+  }
