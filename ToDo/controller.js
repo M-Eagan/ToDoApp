@@ -5,25 +5,25 @@
         .controller("ToDoController", function(){
             const $ctrl = this;
             
-            $ctrl.list=[];
-            $ctrl.add = function() {
-                console.log($ctrl.toDo)
-                $ctrl.list.push($ctrl.toDo)
+            $ctrl.list=[
+                {ToDo: "Groceries" , done: false},
+                {ToDo: "Walk the Dog", done: true},
+                {ToDo: "Clean Up", done: false},
+                {ToDo: "Laundry", done: false},
+            ];
+            $ctrl.add = function(ToDo) {
+                // console.log($ctrl.toDo)
+                $ctrl.list.push({ToDo:$ctrl.toDo, done: false});
             };
             
             $ctrl.remove = function(index) {
                 $ctrl.list.splice(index,1);
             };
                
-            var classApp = angular.module('classApp', []);
+            // $ctrl.completeTask = (index) => {
+            //     $ctrl.toDoTasks[index].done = true;
+            // }
 
-classApp.controller('classCtrl', function ($scope) {
-	$scope.isActive = false;
-  $scope.activeButton = function() {
-    $scope.isActive = !$scope.isActive;
-  }  
-});
-        });
 
-       
-}
+    });
+    }
