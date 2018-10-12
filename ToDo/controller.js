@@ -12,7 +12,6 @@
                 {ToDo: "Laundry", done: false},
             ];
             $ctrl.add = function(ToDo) {
-                // console.log($ctrl.toDo)
                 $ctrl.list.push({ToDo:$ctrl.toDo, done: false});
             };
             
@@ -20,9 +19,9 @@
                 $ctrl.list.splice(index,1);
             };
                
-            // $ctrl.completeTask = (index) => {
-            //     $ctrl.toDoTasks[index].done = true;
-            // }
+            $ctrl.completeTask = function(index) {
+                $ctrl.list[index].done = true;
+            }
 
 
     });

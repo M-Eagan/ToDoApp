@@ -1,8 +1,11 @@
-<input type="text" id="myFilter" placeholder="Filter your to-dos" ng-model="$ctrl.filter"/>
+<input type="text" id="myFilter" placeholder="Filter your to-dos" 
+ng-model="$ctrl.filter"/>
 <ol>
 <li ng-repeat="list in $ctrl.list | filter: $ctrl.filter">    
-    <button class="completeButton" ng-class="{'active': isActive}" ng-click="activeButton()" ng-if="list.done===false" type="button">Complete</button>   
-    {{list.ToDo }}
+    <button class="completeButton" ng-class="{'active': isActive}" 
+    ng-click="$ctrl.completeTask()" ng-if="list.done===false" type="button">
+    Complete</button>   
+    {{list.ToDo}}
     <button class="xButton" ng-click="$ctrl.remove($index)">x</button>
 </li>
 </ol>
