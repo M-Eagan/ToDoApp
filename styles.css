@@ -69,8 +69,10 @@ h2 {
 
  .xButton {
     border: none;
-    justify-content: left;
+    justify-content: right;
     font-size: 15px;
+    text-align: right;
+    margin-right: 5px;
  }
 
  .completeButton {
@@ -85,24 +87,21 @@ h2 {
      width: 450px;
      margin: 0;
      padding: 0;
+     
  }
 
- ol {
-    
- }
-
- li.disabled {
+ .done {
      text-decoration: line-through;
  }
 
- .active {
+ /* .active {
     border: solid 1px rgba(255, 0, 200, 0.801);
     color: rgba(255, 0, 200, 0.801);
   }
 
   .disabled {
-    display: hide;
-  }
+    background-color: grey;
+  } */
 
   todo {
     display: flex;
